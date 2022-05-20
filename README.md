@@ -1,36 +1,12 @@
-### Would you like to support me?
+# react-native-compressor-with-h265
 
-<div align="center">
-<a href="https://github.com/nomi9995?tab=followers">
-    <img src="https://img.shields.io/github/followers/nomi9995?label=Follow%20%40nomi9995&style=social" />
-</a>
-</br>
-<a href="https://www.buymeacoffee.com/numan.dev" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
-</div>
-
----
-
-
-
-# react-native-compressor
-
-<!-- Title -->
-<p align="center">
-<img src="/media/icon.png" alt="alt text" width="150"/>
-</p>
-
-<!-- Header -->
 
 <p align="center">
   <b>Compress videos, images and audio before upload</b>
   <br />
 </p>
 
-<p align="center">
-  <img height="450" src="/media/cover.png">
-</p>
-
-**react-native-compressor** package is a set of functions that allow you compress `Image`,`Audio` and `Video`
+**react-native-compressor-with-h265** package is a set of functions that allow you compress `Image`,`Audio` and `Video`
 
 **If you find this package useful hit the star** 🌟
 
@@ -66,22 +42,14 @@
 
 ### React Native
 
-#### For React Native<0.65
-
 ```sh
-yarn add react-native-compressor@rnlessthan65
-```
-
-#### For React Native 0.65 or greater
-
-```sh
-yarn add react-native-compressor
+yarn add react-native-compressor-with-h265
 ```
 
 ### Managed Expo
 
 ```
-expo install react-native-compressor
+expo install react-native-compressor-with-h265
 ```
 
 Add the Compressor plugin to your Expo config (`app.json`, `app.config.json` or `app.config.js`):
@@ -89,7 +57,7 @@ Add the Compressor plugin to your Expo config (`app.json`, `app.config.json` or 
 ```json
 {
   "name": "my app",
-  "plugins": ["react-native-compressor"]
+  "plugins": ["react-native-compressor-with-h265"]
 }
 ```
 
@@ -114,7 +82,7 @@ Automatic linking is supported for both `Android` and `IOS`
 Note: If you are using react-native version 0.60 or higher you don't need to link this package.
 
 ```sh
-react-native link react-native-compressor
+react-native link react-native-compressor-with-h265
 ```
 
 ### Manual installation
@@ -122,7 +90,7 @@ react-native link react-native-compressor
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-compressor` and add `Compressor.xcodeproj`
+2. Go to `node_modules` ➜ `react-native-compressor-with-h265` and add `Compressor.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libCompressor.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
@@ -135,12 +103,12 @@ react-native link react-native-compressor
 
 2. Append the following lines to `android/settings.gradle`:
    ```
-   include ':react-native-compressor'
-   project(':react-native-compressor').projectDir = new File(rootProject.projectDir,'../node_modules/react-native-compressor/android')
+   include ':react-native-compressor-with-h265'
+   project(':react-native-compressor-with-h265').projectDir = new File(rootProject.projectDir,'../node_modules/react-native-compressor-with-h265/android')
    ```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
    ```
-     compile project(':react-native-compressor')
+     compile project(':react-native-compressor-with-h265')
    ```
 
 ## Usage
@@ -150,7 +118,7 @@ react-native link react-native-compressor
 ##### Automatic Image Compression Like Whatsapp
 
 ```js
-import { Image } from 'react-native-compressor';
+import { Image } from 'react-native-compressor-with-h265';
 
 const result = await Image.compress('file://path_of_file/image.jpg', {
   compressionMethod: 'auto',
@@ -162,7 +130,7 @@ const result = await Image.compress('file://path_of_file/image.jpg', {
 ##### Manual Image Compression
 
 ```js
-import { Image } from 'react-native-compressor';
+import { Image } from 'react-native-compressor-with-h265';
 
 const result = await Image.compress('file://path_of_file/image.jpg', {
   maxWidth: 1000,
@@ -175,7 +143,7 @@ const result = await Image.compress('file://path_of_file/image.jpg', {
 ##### Automatic Video Compression Like Whatsapp
 
 ```js
-import { Video } from 'react-native-compressor';
+import { Video } from 'react-native-compressor-with-h265';
 
 const result = await Video.compress(
   'file://path_of_file/BigBuckBunny.mp4',
@@ -197,7 +165,7 @@ const result = await Video.compress(
 ##### Manual Video Compression
 
 ```js
-import { Video } from 'react-native-compressor';
+import { Video } from 'react-native-compressor-with-h265';
 
 const result = await Video.compress(
   'file://path_of_file/BigBuckBunny.mp4',
@@ -215,7 +183,7 @@ const result = await Video.compress(
 ##### Cancel Video Compression
 
 ```js
-import { Video } from 'react-native-compressor';
+import { Video } from 'react-native-compressor-with-h265';
 
 let cancellationVideoId = '';
 
@@ -243,7 +211,7 @@ Video.cancelCompression(cancellationVideoId);
 ### Audio
 
 ```js
-import { Audio } from 'react-native-compressor';
+import { Audio } from 'react-native-compressor-with-h265';
 
 const result = await Audio.compress(
   'file://path_of_file/file_example_MP3_2MG.mp3',
@@ -254,7 +222,7 @@ const result = await Audio.compress(
 ### Background Upload
 
 ```js
-import { backgroundUpload } from 'react-native-compressor';
+import { backgroundUpload } from 'react-native-compressor-with-h265';
 
 const headers = {};
 
@@ -330,7 +298,7 @@ const uploadResult = await backgroundUpload(
 
 - ###### `minimumFileSizeForCompress: number` (default: 16)
 
-  16 means 16mb. default our package do not compress under 16mb video file. minimumFileSizeForCompress will allow us to change this 16mb offset. fixed [#26](https://github.com/Shobbak/react-native-compressor/issues/26)
+  16 means 16mb. default our package do not compress under 16mb video file. minimumFileSizeForCompress will allow us to change this 16mb offset. fixed [#26](https://github.com/Shobbak/react-native-compressor-with-h265/issues/26)
 
 - ###### `getCancellationId: function`
   `getCancellationId` is a callback function that gives us compress video id, which can be used in `Video.cancelCompression` method to cancel the compression
@@ -375,7 +343,7 @@ type FileSystemUploadOptions = (
 if you want to get metadata of video than you can use this function
 
 ```js
-import { getVideoMetaData } from 'react-native-compressor';
+import { getVideoMetaData } from 'react-native-compressor-with-h265';
 
 const metaData = await getVideoMetaData(filePath);
 ```
@@ -402,7 +370,7 @@ if you want to convert
 the you can you `getRealPath` function like this
 
 ```js
-import { getRealPath } from 'react-native-compressor';
+import { getRealPath } from 'react-native-compressor-with-h265';
 
 const realPath = await getRealPath(fileUri, 'video'); //   file://file_path.extension
 ```
@@ -414,7 +382,7 @@ const realPath = await getRealPath(fileUri, 'video'); //   file://file_path.exte
 if you wanna make random file path in cache folder then you can use this method like this
 
 ```js
-import { generateFilePath } from 'react-native-compressor';
+import { generateFilePath } from 'react-native-compressor-with-h265';
 
 const randomFilePathForSaveFile = await generateFilePath('mp4'); //   file://file_path.mp4
 ```
